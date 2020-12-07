@@ -10,9 +10,8 @@ public enum ImpulseSounds
 {
     JUMP,
     HIT1,
-    HIT2,
-    HIT3,
-    DIE
+    DIE,
+    SPAWN
 }
 
 public class PlayerBehaviour : MonoBehaviour
@@ -263,6 +262,7 @@ public class PlayerBehaviour : MonoBehaviour
             health = 100;
             healthBar.SetValue(health);
             transform.position = spawnPoint.position;
+            sounds[(int)ImpulseSounds.SPAWN].Play();
         }
         else
         {
@@ -294,7 +294,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void PlayRandomHitSound()
     {
         var randomHitSound = UnityEngine.Random.Range(1, 3);
-        sounds[randomHitSound].Play();
+        sounds[1].Play();
     }
 
     private void ShakeCamera()
