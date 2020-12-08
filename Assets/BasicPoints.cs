@@ -2,20 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlitchHeartBehaviour : MonoBehaviour
+public class BasicPoints : MonoBehaviour
 {
     public Game_Manager manager;
     public AudioSource audio;
+
     bool doOnce = true;
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        
+        if (collision.gameObject.tag == "Player")
         {
-            if(doOnce)
+            
+            if (doOnce)
             {
                 playAudio();
-                manager.CollectedHeart();
-                manager.addScore(10);
+                manager.addScore(1);
                 doOnce = false;
                 Destroy(gameObject);
 

@@ -12,6 +12,7 @@ TagManager:
   - Opossum
   - Enemy
   - Bullet
+  - pickup
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - AI
   - healthbar
   - marker
-  - 
+  - pickup
   - 
   - 
   - 
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2054023589
+    locked: 0
+  - name: Pickups
+    uniqueID: 2224097047
     locked: 0

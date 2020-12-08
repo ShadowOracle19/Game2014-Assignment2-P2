@@ -44,7 +44,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     
 
-    private Rigidbody2D m_rigidBody2D;
+    public Rigidbody2D m_rigidBody2D;
     private SpriteRenderer m_spriteRenderer;
     private Animator m_animator;
     private RaycastHit2D groundHit;

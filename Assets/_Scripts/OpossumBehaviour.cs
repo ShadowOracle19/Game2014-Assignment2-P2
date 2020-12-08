@@ -43,10 +43,7 @@ public class OpossumBehaviour : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (_hasLOS())
-        {
-            _FireBullet();
-        }
+        
 
         _LookInFront();
         _LookAhead();
@@ -66,18 +63,7 @@ public class OpossumBehaviour : MonoBehaviour
 
     }
 
-    private bool _hasLOS()
-    {
-        if (opossumLOS.colliders.Count > 0)
-        {
-            if (opossumLOS.collidesWith.gameObject.name == "Player" && opossumLOS.colliders[0].gameObject.name == "Player")
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
+    
 
     private void _LookInFront()
     {
